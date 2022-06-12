@@ -1,0 +1,45 @@
+# Import the matplotlib.pyplot submodule and name it plt
+import matplotlib.pyplot as plt
+
+# Create a Figure and an Axes with plt.subplots
+fig, ax = plt.subplots()
+
+# Plot MLY-PRCP-NORMAL from seattle_weather against the MONTH
+ax.plot(seattle_weather["MONTH"], seattle_weather["MLY-PRCP-NORMAL"])
+
+# Plot MLY-PRCP-NORMAL from austin_weather against MONTH
+ax.plot(austin_weather["MONTH"], austin_weather["MLY-PRCP-NORMAL"])
+
+
+ax.plot(seattle_weather["MONTH"], seattle_weather[""MLY-TAVG-NORMAL],marker="v",linestyle="--",color="r")
+ax.set_xlabel("Time (months)")
+ax.set_ylabel("Average temperature (Fahrenheit degrees)")
+plt.show()
+//
+import matplotlib.pyplot as plt
+
+# Use plt.subplots to create fig and ax
+fig, ax=plt.subplots()
+
+# Create variable seventies with data from "1970-01-01" to "1979-12-31"
+seventies = climate_change["1970-01-01","1979-12-31"]
+
+# Add the time-series for "co2" data from seventies to the plot
+ax.plot(seventies, climate_change["co2"])
+
+# Show the figure
+plt.show
+//
+import matplotlib.pyplot as plt
+
+# Use plt.subplots to create fig and ax
+fig, ax=plt.subplots()
+
+# Create variable seventies with data from "1970-01-01" to "1979-12-31"
+seventies = climate_change["1970-01-01" : "1979-12-31"]
+
+# Add the time-series for "co2" data from seventies to the plot
+ax.plot(seventies.index, seventies["co2"])
+
+# Show the figure
+plt.show()
